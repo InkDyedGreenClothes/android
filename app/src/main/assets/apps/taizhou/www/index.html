@@ -1,0 +1,138 @@
+<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,viewport-fit=cover,user-scalable=no"><van-number-keyboard safe-area-inset-bottom><link rel=icon href=favicon.ico><script src=./jpush.js></script><script src="http://api.map.baidu.com/api?v=2.0&ak=FCHGjyCGix39X1wLZkErpUofkTzQHeZP"></script><title>vue-vant</title><style>html,
+    body {
+      height: 100%;
+      font-family: "PingFang SC", "Microsoft YaHei";
+    }
+
+    /* 隐藏百度地图图标 */
+    .BMap_cpyCtrl {
+      display: none;
+    }
+
+    .anchorBL {
+      display: none;
+    }
+
+    .van-field__right-icon {
+      color: #009140 !important;
+    }
+
+    .detail-contet .van-collapse-item__content {
+      background: #f4f4f4;
+      max-height: 200px;
+      overflow-y: scroll;
+    }
+
+    /* 文件上传 */
+
+    .van-uploader__wrapper {
+      position: absolute !important;
+      top: 0 !important;
+      right: 0 !important;
+    }
+
+    /*地图标题*/
+    .BMap_bubble_title {
+      color: white;
+      font-size: 13px;
+      font-weight: bold;
+      text-align: left;
+      padding-left: 5px;
+      padding-top: 5px;
+      border-bottom: 1px solid gray;
+      background-color: #0066b3;
+    }
+
+    /* 消息内容 */
+    .BMap_bubble_content {
+      /* margin: 32px auto 0 auto; */
+      width: 80px !important;
+      margin-left: 19px;
+      ;
+      height: 40px !important;
+      line-height: 40px;
+      text-align: center;
+      background-color: white;
+      border-radius: 5px !important;
+      /* padding-left:0; */
+      /* padding-top:0; */
+    }
+
+    /* 内容 */
+    .BMap_pop div:nth-child(9) {
+      width: 110px !important;
+      height: 40px !important;
+      top: 100px !important;
+      left: 120px !important;
+      border-radius: 7px;
+    }
+
+    /* 左上角删除按键 */
+    .BMap_pop img {
+      top: 43px !important;
+      left: 215px !important;
+    }
+
+    .BMap_top {
+      display: none;
+    }
+
+    .BMap_bottom {
+      display: none;
+    }
+
+    .BMap_center {
+      display: none;
+    }
+
+    /* 隐藏边角 */
+    .BMap_pop div:nth-child(1) div {
+      display: none;
+    }
+
+    .BMap_pop div:nth-child(3) {
+      display: none;
+    }
+
+    .BMap_pop div:nth-child(4) {
+      display: none;
+    }
+
+    .BMap_pop div:nth-child(5) {
+      display: none;
+    }
+
+    .BMap_pop div:nth-child(6) {
+      display: none;
+    }
+
+    .BMap_pop div:nth-child(7) {
+      display: none;
+    }
+
+    /* 隐藏关闭按钮 */
+    .BMap_pop img {
+      display: none;
+    }
+
+    .BMap_shadow {
+      display: none;
+      ;
+    }
+
+    .three {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 10px 20px 10px 0;
+      border-color: transparent #fff transparent transparent;
+      position: absolute;
+      left: 5px;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+
+    /* 隐藏label */
+    .BMapLabel {
+      display: none !important;
+    }</style><link href=css/app.3f9e55e1.css rel=preload as=style><link href=css/chunk-vendors.8de907f3.css rel=preload as=style><link href=js/app.947a707e.js rel=preload as=script><link href=js/chunk-vendors.d9e49de7.js rel=preload as=script><link href=css/chunk-vendors.8de907f3.css rel=stylesheet><link href=css/app.3f9e55e1.css rel=stylesheet></head><body><noscript><strong>We're sorry but vue-vant doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><script src=js/chunk-vendors.d9e49de7.js></script><script src=js/app.947a707e.js></script></body></html>

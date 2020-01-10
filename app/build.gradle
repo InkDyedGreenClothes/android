@@ -1,0 +1,62 @@
+apply plugin: 'com.android.application' //表示是一个应用程序的模块，可独立运行
+
+android {
+    signingConfigs {
+        xxconfig {
+            storeFile file('AppKey.jks')
+            storePassword 'Nwttech-app'
+            keyAlias = 'nwttech'
+            keyPassword 'Nwttech-app'
+        }
+    }
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.newing.garbage.management" // 指定包名
+        minSdkVersion 14
+        targetSdkVersion
+        versionCode 1   //版本号
+        multiDexEnabled true
+        versionName "1.0"   //版本名称
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY : "dfa7616c9249c63c3f02766c", // JPush上注册的包名对应的 appkey
+                JPUSH_CHANNEL : "developer-default", // 暂时填写默认值即可
+        ]
+    }
+    buildTypes {
+        release {
+            debuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.xxconfig
+        }
+        debug {
+            signingConfig signingConfigs.xxconfig
+        }
+    }
+
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation(name: 'lib.5plus.base-release', ext: 'aar')
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation(name: 'miit_mdid_1.0.10', ext: 'aar')
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    implementation 'cn.jiguang.sdk:jpush:3.3.4'  // 此处以JPush 3.3.4 版本为例。
+    implementation 'cn.jiguang.sdk:jcore:2.1.2'  // 此处以JCore 2.1.2 版本为例。
+}
