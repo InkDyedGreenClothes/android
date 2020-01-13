@@ -14,9 +14,9 @@ android {
         applicationId "com.newing.garbage.management" // 指定包名
         minSdkVersion 14
         targetSdkVersion
-        versionCode 1   //版本号
+        versionCode 5   //版本号
         multiDexEnabled true
-        versionName "1.0"   //版本名称
+        versionName "1.0.5"   //版本名称
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         ndk {
             abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
@@ -26,6 +26,14 @@ android {
                 JPUSH_APPKEY : "dfa7616c9249c63c3f02766c", // JPush上注册的包名对应的 appkey
                 JPUSH_CHANNEL : "developer-default", // 暂时填写默认值即可
         ]
+    }
+//    自动生成包名
+    android.applicationVariants.all {
+        variant ->
+            variant.outputs.all {
+                //在这里修改apk文件名
+                outputFileName = "taizhou-management-v${variant.versionName}.apk"
+            }
     }
     buildTypes {
         release {
