@@ -1,9 +1,14 @@
-<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,viewport-fit=cover,user-scalable=no"><van-number-keyboard safe-area-inset-bottom><link rel=icon href=favicon.ico><script src=./jpush.js></script><script src="http://api.map.baidu.com/api?v=2.0&ak=FCHGjyCGix39X1wLZkErpUofkTzQHeZP"></script><title>vue-vant</title><style>html,
+<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,viewport-fit=cover,user-scalable=no"><van-number-keyboard safe-area-inset-bottom><link rel=icon href=favicon.ico><script src=./jpush.js></script><title>vue-vant</title><style>html,
     body {
       height: 100%;
       font-family: "PingFang SC", "Microsoft YaHei";
     }
-
+    
+    .van-field__error-message {
+      position: absolute !important;
+      right: 24px !important;
+      top: 0;
+    }
     /* 隐藏百度地图图标 */
     .BMap_cpyCtrl {
       display: none;
@@ -21,6 +26,13 @@
       background: #f4f4f4;
       max-height: 200px;
       overflow-y: scroll;
+    }
+
+    .index .van-collapse-item__content {
+      background: #f4f4f4;
+      max-height: 200px;
+      overflow-y: scroll;
+      padding: 0;
     }
 
     /* 文件上传 */
@@ -57,12 +69,14 @@
       /* padding-left:0; */
       /* padding-top:0; */
     }
-
+    .BMap_bubble_content {
+      box-shadow:0px 0px 6px 1px rgba(0,0,0,0.15);
+    }
     /* 内容 */
     .BMap_pop div:nth-child(9) {
       width: 110px !important;
       height: 40px !important;
-      top: 100px !important;
+      top: 96px !important;
       left: 120px !important;
       border-radius: 7px;
     }
@@ -135,4 +149,4 @@
     /* 隐藏label */
     .BMapLabel {
       display: none !important;
-    }</style><link href=css/app.925b5117.css rel=preload as=style><link href=css/chunk-vendors.8de907f3.css rel=preload as=style><link href=js/app.5a3d1f83.js rel=preload as=script><link href=js/chunk-vendors.1f842bbe.js rel=preload as=script><link href=css/chunk-vendors.8de907f3.css rel=stylesheet><link href=css/app.925b5117.css rel=stylesheet></head><body><noscript><strong>We're sorry but vue-vant doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><script src=js/chunk-vendors.1f842bbe.js></script><script src=js/app.5a3d1f83.js></script></body></html>
+    }</style><link href=css/app.b1daca01.css rel=preload as=style><link href=css/chunk-vendors.2bb66a2e.css rel=preload as=style><link href=js/app.4d2460cc.js rel=preload as=script><link href=js/chunk-vendors.a0acba78.js rel=preload as=script><link href=css/chunk-vendors.2bb66a2e.css rel=stylesheet><link href=css/app.b1daca01.css rel=stylesheet></head><body><noscript><strong>We're sorry but vue-vant doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><script src=js/chunk-vendors.a0acba78.js></script><script src=js/app.4d2460cc.js></script></body></html>
