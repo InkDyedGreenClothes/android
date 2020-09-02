@@ -14,9 +14,9 @@ android {
         applicationId "com.newing.garbage.management" // 指定包名0+
         minSdkVersion 14
         targetSdkVersion
-        versionCode 9  //版本号 =>>>  测试 1 正式 9
+        versionCode 3  //版本号 =>>>  测试 3 正式 9
         multiDexEnabled true
-        versionName "1.0.9"   //版本名称
+        versionName "1.0.3"   //版本名称
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         ndk {
             abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
